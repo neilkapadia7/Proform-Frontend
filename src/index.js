@@ -5,6 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import store from './store'
+import setAuthToken from './services/setToken'
+
+if(localStorage.xtoken) {
+  setAuthToken(localStorage.xtoken);
+}
 
 ReactDOM.render(
   <Provider store={store}>
